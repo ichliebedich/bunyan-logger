@@ -147,7 +147,7 @@ module.exports.requestLogger = (opts) => {
     requestData = updateFields(ctx, opts.updateLogFields, requestData);
     requestData = updateFields(ctx, opts.updateRequestLogFields, requestData);
 
-    ctx.log.info(requestData, formatRequestMessage.call(ctx, requestData));
+    ctx.log.debug(requestData, formatRequestMessage.call(ctx, requestData));
 
     const startTime = new Date().getTime();
     let err;
